@@ -62,7 +62,7 @@ export const HeroSection = () => {
                         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-4">
                             <a
                                 href="#projects"
-                                className="cosmic-button text-center"
+                                className="press-button text-center"
                             >
                                 View My Work
                             </a>

@@ -20,7 +20,7 @@ export const ContactSection = () => {
         {/* "Say Hello" button linking to email */}
         <div className="text-center mt-12">
           <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
+            className="press-button w-fit flex items-center mx-auto gap-2"
             href="mailto:alex.chufue.xiong@gmail.com"
           >
             Get In Touch <Send className="h-5 w-5" />

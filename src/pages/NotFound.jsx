@@ -44,7 +44,7 @@ const NotFound = () => {
           </p>
           <a
             href="/"
-            className="cosmic-button flex items-center justify-center gap-2 w-fit mx-auto"
+            className="press-button flex items-center justify-center gap-2 w-fit mx-auto"
           >
             <ArrowLeft className="h-5 w-5" />
             Go Back Home
