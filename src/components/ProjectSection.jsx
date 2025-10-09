@@ -1,22 +1,27 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
+import hobbyistImg from "../assets/projects/Hobbyist.jpg";
+import wanderworkImg from "../assets/projects/WonderWork.jpg";
+import restaurantTinderImg from "../assets/projects/RestaurantTinder.png";
+
+
 const projects = [
   {
     id: 1,
     title: "Hobbyist",
     description:
       "A full-featured mobile app that helps users track and manage their hobbies, projects, and inventory. Includes goal setting, calendar integration, and offline-first functionality.",
-    image: "/projects/Hobbyist.png",
+    image: hobbyistImg,
     tags: ["TypeScript", "React Native", "Expo", "Firebase", ],
     demoUrl: "#",
     githubUrl: "https://github.com/Xiong-Alex/Hobbyist", 
   },
   {
     id: 2,
-    title: "WanderWorks",
+    title: "WanderWork",
     description:
       "A web application to help users explore curated travel projects and share itineraries. Built with performance and scalability in mind.",
-    image: "/projects/WanderWorks.png",
+    image: wanderworkImg,
     tags: ["JavaScript", "Firebase", "Express", "React", "Node"],
     demoUrl: "#",
     githubUrl: "https://github.com/Xiong-Alex/WanderWorks", 
@@ -26,7 +31,7 @@ const projects = [
     title: "RestaurantTinder",
     description:
       "Swipe-based restaurant discovery app that helps users quickly choose where to eat. Features a clean UI and local storage support.",
-    image: "/projects/final-capstone.png",
+    image: restaurantTinderImg,
     tags: ["Java", "Spring Boot", "PostgreSQL", "React", "MUI"],
     demoUrl: "#",
     githubUrl: "https://github.com/Xiong-Alex/Merit_America-Capstones/tree/main/final-capstone-main", 
@@ -77,13 +82,13 @@ export const ProjectsSection = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
+                    {/* <a
                       href={project.demoUrl}
                       target="_blank"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <ExternalLink size={20} />
-                    </a>
+                    </a> */}
                     <a
                       href={project.githubUrl}
                       target="_blank"
