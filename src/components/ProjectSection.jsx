@@ -25,7 +25,7 @@ const projects = [
       "A responsive and modern portfolio website built to showcase my projects, experience, and technical skills.",
     image: portfolioImg,
     tags: ["React", "JavaScript", "Vite", "Tailwind CSS"],
-    demoUrl: "https://xiong-alex.com", 
+    demoUrl: "https://xiong-alex.com",
     githubUrl: "https://github.com/Xiong-Alex/Portfolio-Site",
   },
   {
@@ -66,7 +66,6 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
           Featured <span className="text-primary"> Projects </span>
         </h2>
 
@@ -79,7 +78,9 @@ export const ProjectsSection = () => {
           {projects.map((project, key) => (
             <div
               key={key}
-              className="border-1 hover:border-primary group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full"
+              // hover:shadow-md hover:shadow-primary/80 | border or shadow?
+              className="hover:shadow-md hover:shadow-primary/80 border-1 group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full"
+              // className="border-1 hover:border-primary group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -92,7 +93,7 @@ export const ProjectsSection = () => {
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                    <span className="hover:scale-110 transition-transform hover:border-primary/30 px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
                       {tag}
                     </span>
                   ))}
