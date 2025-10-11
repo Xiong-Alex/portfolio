@@ -18,7 +18,7 @@ import {
   SiFigma,
   SiPostman,
   SiIntellijidea,
-  SiMysql 
+  SiMysql
 } from "react-icons/si";
 
 // Generic placeholder icon for VS Code or fallback
@@ -104,12 +104,14 @@ export const SkillsSection = () => {
 
         {/* Skills grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {filteredSkills.map((skill, idx) => {
+          {filteredSkills.map((skill, idx) => {
             const { name, desc, Icon } = skill;
             return (
               <div
                 key={`${name}-${idx}`}
-                className="bg-card p-4 rounded-lg shadow-xs card-hover"
+                //hover : shadow or border?
+                // className="border-1 border-card hover:border-primary bg-card p-4 rounded-lg shadow-xs card-hover"
+                className="hover:shadow-sm hover:shadow-primary/80 bg-card p-4 rounded-lg shadow-xs card-hover"
               >
                 <div className="flex items-center space-x-4">
                   {Icon && (
