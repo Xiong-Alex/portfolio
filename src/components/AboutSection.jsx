@@ -1,4 +1,4 @@
-import { Briefcase, Code, Server  } from "lucide-react";
+import { Briefcase, Code, Server } from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -34,10 +34,11 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href=""
+                href="/Xiong-Alex_Resume.docx.pdf"
+                download="Alex_Xiong_Resume.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
-                Download CV
+                Download Resume
               </a>
             </div>
           </div>
