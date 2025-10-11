@@ -79,7 +79,7 @@ export const ProjectsSection = () => {
           {projects.map((project, key) => (
             <div
               key={key}
-              className="border-4 group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full"
+              className="border-1 hover:border-primary group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full"
             >
               <div className="h-48 overflow-hidden">
                 <img
