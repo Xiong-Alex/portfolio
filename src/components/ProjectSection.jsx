@@ -24,8 +24,8 @@ const projects = [
     description:
       "A responsive and modern portfolio website built to showcase my projects, experience, and technical skills.",
     image: portfolioImg,
-    tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
-    demoUrl: "https://xiong-alex.com", // replace with your live URL
+    tags: ["React", "JavaScript", "Vite", "Tailwind CSS"],
+    demoUrl: "https://xiong-alex.com", 
     githubUrl: "https://github.com/Xiong-Alex/Portfolio-Site",
   },
   {
