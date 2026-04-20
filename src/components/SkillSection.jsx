@@ -1,8 +1,9 @@
 import { useState } from "react";
+import * as SiIcons from "react-icons/si";
+import { Code } from "lucide-react";
 import { cn } from "../lib/utils";
 
-// Import brand icons from react-icons/si
-import {
+const {
   SiHtml5,
   SiCss3,
   SiJavascript,
@@ -18,13 +19,17 @@ import {
   SiFigma,
   SiPostman,
   SiIntellijidea,
-  SiMysql
-} from "react-icons/si";
+  SiMysql,
+  SiPython,
+  SiPandas,
+  SiApacheairflow,
+  SiDbt,
+  SiSnowflake,
+  SiApachespark,
+  SiAmazonwebservices,
+  SiStreamlit,
+} = SiIcons;
 
-// Generic placeholder icon for VS Code or fallback
-import { Code } from "lucide-react";
-
-// Define skills grouped by category
 const skillsByCategory = {
   frontend: [
     { name: "HTML", desc: "Markup", Icon: SiHtml5 },
@@ -39,39 +44,48 @@ const skillsByCategory = {
     { name: "Node.js", desc: "JavaScript Runtime", Icon: SiNodedotjs },
     { name: "Express", desc: "Web Framework", Icon: SiExpress },
     { name: "Firestore", desc: "Realtime Database", Icon: SiFirebase },
-    // If SiSupabase is undefined in your react-icons version, replace Icon: Code
     { name: "Supabase", desc: "Open-source Firebase", Icon: SiSupabase || Code },
     { name: "PostgreSQL", desc: "Relational Database", Icon: SiPostgresql },
     { name: "SQL", desc: "Query Language", Icon: SiMysql },
-
+  ],
+  "data engineering": [
+    { name: "Python", desc: "Scripting", Icon: SiPython || Code },
+    { name: "SQL", desc: "Analytics and transformation queries", Icon: SiMysql },
+    { name: "Pandas", desc: "Data manipulation", Icon: SiPandas || Code },
+    { name: "Airflow", desc: "Orchestrator", Icon: SiApacheairflow || Code },
+    { name: "dbt", desc: "Data transformation", Icon: SiDbt || Code },
+    { name: "Snowflake", desc: "Cloud data warehouse", Icon: SiSnowflake || Code },
+    { name: "Spark", desc: "Distributed processing", Icon: SiApachespark || Code },
+    { name: "AWS", desc: "Cloud infrastructure", Icon: SiAmazonwebservices || Code },
+    { name: "Streamlit", desc: "Data app prototyping", Icon: SiStreamlit || Code },
   ],
   tools: [
     { name: "Git/GitHub", desc: "Version Control", Icon: SiGithub },
-    // Use generic placeholder for VS Code
     { name: "VS Code", desc: "Code Editor", Icon: Code },
-    // IntelliJ IDEA: use SiIntellijidea if defined, else fallback
     { name: "IntelliJ IDEA", desc: "IDE", Icon: SiIntellijidea || Code },
     { name: "Figma", desc: "Design Tool", Icon: SiFigma },
     { name: "Postman", desc: "API Testing", Icon: SiPostman },
   ],
 };
 
-// Categories array (including "all")
 const categories = ["all", ...Object.keys(skillsByCategory)];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
-  // Build filtered skills: if “all”, flatten all; else take that category
   const filteredSkills =
     activeCategory === "all"
-      ? Object.values(skillsByCategory).flat()
+      ? Object.values(skillsByCategory)
+          .flat()
+          .filter(
+            (skill, index, skills) =>
+              skills.findIndex((item) => item.name === skill.name) === index
+          )
       : skillsByCategory[activeCategory] || [];
 
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
-        {/* Title and underline */}
         <div className="flex items-center mb-12">
           <h2 className="text-2xl md:text-4xl font-bold text-secondary whitespace-nowrap">
             Technologies & Tools
@@ -80,11 +94,10 @@ export const SkillsSection = () => {
         </div>
 
         <p className="text-left mb-6 max-w-3xl">
-          I'm proficient in a range of modern technologies that empower me to build
-          highly functional solutions. Below are some of my main skills.
+          I work across full-stack development and data engineering, using modern
+          tools to build applications, pipelines, and practical end-to-end systems.
         </p>
 
-        {/* Category filter buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
@@ -102,15 +115,13 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Skills grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredSkills.map((skill, idx) => {
             const { name, desc, Icon } = skill;
+
             return (
               <div
                 key={`${name}-${idx}`}
-                //hover : shadow or border?
-                // className="border-1 border-card hover:border-primary bg-card p-4 rounded-lg shadow-xs card-hover"
                 className="hover:shadow-sm hover:shadow-primary/80 bg-card p-4 rounded-lg shadow-xs card-hover"
               >
                 <div className="flex items-center space-x-4">
@@ -131,8 +142,6 @@ export const SkillsSection = () => {
             );
           })}
         </div>
-
-
       </div>
     </section>
   );

@@ -12,19 +12,17 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-xl md:text-2xl font-semibold">
-              Full-Stack Developer
+                Data Engineer & Full-Stack Developer
             </h3>
 
             <p className="text-muted-foreground">
-              With over 4 years of experience in full-stack development, I specialize
-              in creating practical, scalable, and user centric
-              web applications using modern technologies.
+              I build end-to-end systems — from data pipelines to full-stack applications — 
+              focused on performance, scalability, and clean user experience.
             </p>
 
             <p className="text-muted-foreground">
-              I'm passionate about crafting practical solutions to real
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving tech landscape.
+              Currently a Data Engineer, working with pipelines and analytics while continuing 
+              to develop full-stack applications.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -50,10 +48,9 @@ export const AboutSection = () => {
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg">Data Engineer</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
+                    Building pipelines, ETL workflows, and scalable data systems.
                   </p>
                 </div>
               </div>
@@ -65,9 +62,9 @@ export const AboutSection = () => {
                   <Server className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Backend Development</h4>
+                  <h4 className="font-semibold text-lg">Full-Stack Development</h4>
                   <p className="text-muted-foreground">
-                    Building scalable APIs, managing databases, and integrating server-side logic to power web apps.
+                    Developing modern web apps with clean UI and solid backend systems.
                   </p>
                 </div>
               </div>
@@ -80,14 +77,15 @@ export const AboutSection = () => {
                 </div>
 
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
+                  <h4 className="font-semibold text-lg">Systems & Architecture</h4>
                   <p className="text-muted-foreground">
-                    Leading projects from conception to completion with agile
-                    methodologies.
+                    Designing end-to-end systems that connect data, backend, and frontend.
                   </p>
                 </div>
               </div>
             </div>
+
+            
           </div>
         </div>
       </div>

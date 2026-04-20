@@ -50,7 +50,7 @@ const projects = [
   },
   {
     id: 5,
-    title: "RestaurantTinder",
+    title: "ReMatch",
     description:
       "Swipe-based restaurant discovery app that helps users quickly choose where to eat. Features a clean UI and local storage support.",
     image: restaurantTinderImg,

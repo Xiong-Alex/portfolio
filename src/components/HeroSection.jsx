@@ -47,14 +47,14 @@ export const HeroSection = () => {
 
                         <h1 className="text-2xl md:text-4xl font-bold tracking-widest">
                             <span className="text-primary opacity-0 animate-fade-in-delay-2">
-                                Full-Stack Developer, Web & Mobile
+                                Data Engineer & Full-Stack Developer
                             </span>
                         </h1>
 
                         <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                            I create practical solutions with stellar user experiences using
-                            modern technologies. Specializing in full-stack development, I craft
-                            scalable, user-centric web applications from end to end.
+                            I design and build scalable data pipelines and full-stack applications, 
+                            bridging backend systems, data engineering, and user-facing experiences 
+                            to deliver practical, end-to-end solutions.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-4">
